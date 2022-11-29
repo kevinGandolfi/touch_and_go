@@ -4,7 +4,7 @@ class AirplanesController < ApplicationController
   end
 
   def show
-    @airplanes = Airplane.find(params[:id])
+    @airplane = Airplane.find(params[:id])
   end
 
   def new
