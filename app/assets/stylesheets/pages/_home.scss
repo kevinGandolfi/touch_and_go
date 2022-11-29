@@ -1,1 +1,19 @@
 // Specific CSS for your home-page
+
+.banner {
+height: 65vh;
+background-size: cover;
+background-position: center;
+position:relative;
+}
+
+.credits {
+  position:absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.btn-banner{
+ background-color: #16213E;
+ color: white;
+}

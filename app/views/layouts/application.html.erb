@@ -10,12 +10,16 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
+
+
   <body>
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" class="border border-success p-2 mb-2">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
     <i class="fa-solid fa-plane-departure"><p> Touch and go </p></i>
     <% end %>
+
+
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -47,6 +51,16 @@
     </div>
   </div>
 </div>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://compareprivateplanes.com/images/gulfstream/g700/16.jpeg);">
+  <div class="container">
+    <h1><strong>Touch</strong> & <strong>Go</strong>!</h1>
+    <p>Rent aircrafts and crews</p>
+    <a class="btn btn-banner" href="#">Start up Checklist</a>
+  </div>
+<p class="credits">Copyrights courtesy of Gulfstream Aerospace Corporation </p>
+</div>
+
 
     <%= yield %>
   </body>
