@@ -17,3 +17,9 @@ position:relative;
  background-color: #16213E;
  color: white;
 }
+
+.homegrid {
+ display:grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+ grid-gap: 16px;
+}

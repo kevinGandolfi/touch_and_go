@@ -1,0 +1,24 @@
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://compareprivateplanes.com/images/gulfstream/g700/16.jpeg);">
+  <div class="container">
+    <h1><strong>Touch</strong> & <strong>Go</strong>!</h1>
+    <p>Rent aircrafts and crews</p>
+    <a class="btn btn-banner" href="#">Start up Checklist</a>
+  </div>
+<p class="credits">Copyrights courtesy of Gulfstream Aerospace Corporation </p>
+</div>
+
+<div class="homegrid">
+  <div class="col">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <% @airplanes.each do |airplane| %>
+        <h5 class="card-title"> <%= airplane.brand_and_model %></h5>
+        <p class="card-list"> <%= airplane.registration %></p>
+        <p> <%= airplane.user.first_name %> <%=  airplane.user.last_name %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
