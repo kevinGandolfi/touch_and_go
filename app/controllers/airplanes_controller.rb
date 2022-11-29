@@ -25,7 +25,7 @@ class AirplanesController < ApplicationController
   end
 
   def update
-    if @airplane.update(airlpane_params)
+    if @airplane.update(airplane_params)
       redirect_to airplane_path(@airplane)
     else
       render :edit, status: :unprocessable_entity
