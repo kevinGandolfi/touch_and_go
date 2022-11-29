@@ -1,0 +1,18 @@
+ <%= simple_form_for(@airplane) do |f| %>
+  <%= f.label :brand_and_model %>
+  <%= f.text_field :brand_and_model %>
+  <%= f.label :weight %>
+  <%= f.text_field :weight %>
+  <%= f.label :registration %>
+  <%= f.text_field :registration %>
+  <%= f.label :range %>
+  <%= f.text_field :range %>
+  <%= f.label :speed %>
+  <%= f.text_field :speed %>
+  <%= f.label :number_of_engines %>
+  <%= f.text_field :number_of_engines %>
+  <%= f.label :pax_capacity %>
+  <%= f.text_field :pax_capacity %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.submit %>
+<% end %>
