@@ -1,0 +1,8 @@
+<%= simple_form_for(airplane, data: {turbo: false}) do |f| %>
+  <%= f.input :brand_and_model %>
+  <%= f.input :registration %>
+  <%= f.input :weight %>
+  <%= f.input :number_of_engines %>
+  <%= f.input :pax_capacity %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
