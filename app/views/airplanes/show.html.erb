@@ -27,5 +27,8 @@
   </button>
 </div>
 
-
+<%= link_to "Delete",
+  airplane_path(@airplane),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
 <%# <%= render "form", airplane: @airplane %> %>

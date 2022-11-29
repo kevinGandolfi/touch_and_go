@@ -1,5 +1,5 @@
 class AirplanesController < ApplicationController
-  before_action :set_airplane, only: [:show, :edit, :update]
+  before_action :set_airplane, only: [:show, :edit, :update, :destroy]
 
   def index
     @airplanes = Airplane.all
