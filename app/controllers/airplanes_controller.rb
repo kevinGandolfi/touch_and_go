@@ -23,6 +23,11 @@ class AirplanesController < ApplicationController
   private
 
   def airplane_params
-    params.require(:airplane).permit(:weight, :registration, :number_of_engines, :brand_and_model, :pax_capacity)
+    params.require(:airplane).permit(:weight,
+       :registration,
+       :number_of_engines,
+       :brand_and_model,
+       :pax_capacity,
+       photos: [] )
   end
 end
