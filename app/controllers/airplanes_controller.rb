@@ -3,6 +3,10 @@ class AirplanesController < ApplicationController
     @airplanes = Airplane.all
   end
 
+  def show
+    @airplanes = Airplane.find(params[:id])
+  end
+
   def new
     @airplane = Airplane.new
   end
