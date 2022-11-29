@@ -32,10 +32,15 @@ class AirplanesController < ApplicationController
     end
   end
 
+  def destroy
+    @airplane.destroy
+    redirect_to airplanes_path, status: :see_other
+  end
+
   private
 
   def airplane_params
-    params.require(:airplane).permit(:weight, :registration, :number_of_engines, :brand_and_model, :pax_capacity)
+    params.require(:airplane).permit(:weight, :registration, :number_of_engines, :brand_and_model, :pax_capacity, :speed, :range, :max_altitude)
   end
 
   def set_airplane
