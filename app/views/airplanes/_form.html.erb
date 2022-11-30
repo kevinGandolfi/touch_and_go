@@ -1,12 +1,12 @@
 <%= simple_form_for(airplane, data: {turbo: false}) do |f| %>
-  <%= f.input :brand_and_model %>
-  <%= f.input :registration %>
-  <%= f.input :weight %>
-  <%= f.input :range %>
-  <%= f.input :speed %>
-  <%= f.input :number_of_engines %>
-  <%= f.input :pax_capacity %>
-  <%= f.input :max_altitude %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.input :brand_and_model, placeholder:'Brand and model', label: false %>
+  <%= f.input :registration, placeholder:'Registration', label: false %>
+  <%= f.input :weight, placeholder:'Weight', label: false %>
+  <%= f.input :range, placeholder:'Range', label: false %>
+  <%= f.input :speed, placeholder:'Speed', label: false %>
+  <%= f.input :number_of_engines, placeholder:'Number of engines', label: false %>
+  <%= f.input :pax_capacity, placeholder:'Pax capacity', label: false %>
+  <%= f.input :max_altitude, placeholder:'Max altitude', label: false %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true }, placeholder:'Brand and model', label: false %>
   <%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>

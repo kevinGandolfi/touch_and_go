@@ -2,7 +2,13 @@
   justify-content: space-between;
   background: rgb(96, 96, 238);
   border: rgb(1, 1, 6);
+  /* background-color: transparent;
+  transition: 0.5s background-color ease; */
 }
+
+/* .navbar-lewagon-white {
+  background-color: white;
+} */
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -16,7 +22,7 @@
   display: inline;
   justify-content: space-between;
   color: white;
-  margin-left: 20px;
+  margin-left: 19px;
 }
 
 .nav-link {

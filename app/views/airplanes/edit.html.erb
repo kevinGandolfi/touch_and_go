@@ -1,3 +1,8 @@
-<h2>Edit airplane</h2>
+  <h2>Edit airplane</h2>
 
-<%= render "form", airplane: @airplane %>
+<div class="container-from-edit">
+  <%= render "form", airplane: @airplane %>
+
+  <%= link_to "Back", airplane_path(@airplane.id), class: "btn btn-gradient" %>
+
+</div>

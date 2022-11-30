@@ -1,5 +1,5 @@
 <div class="container">
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+ <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -25,15 +25,19 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
-</div>
+ </div>
 
-<%= link_to "Add a new airplane", new_airplane_path %>
+ <div class="container-button">
+  <%# <%= link_to "Add a new airplane" , new_airplane_path, class: "btn btn-gradient" %>
 
-
-<%= link_to "Delete",
+  <%= link_to "Delete",
   airplane_path(@airplane),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+  class: "btn btn-gradient"
+  %>
 
-<%= link_to "Back", airplanes_path  %>
+  <%= link_to "Back", airplanes_path, class: "btn btn-gradient" %>
+
+  <%= link_to "Edit", edit_airplane_path(@airplane.id), class: "btn btn-gradient" %>
+ </div>
+</div>

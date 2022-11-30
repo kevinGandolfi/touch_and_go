@@ -1,4 +1,13 @@
 .carousel {
-  display: block;
-  min-height: 600px;
+  min-height: 300px;
+}
+
+.carousel-inner {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container-button {
+  display: flex;
+  justify-content: center;
 }
