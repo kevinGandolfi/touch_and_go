@@ -17,7 +17,10 @@
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" class="border border-success p-2 mb-2">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
-    <i class="fa-solid fa-plane-departure"><p> Touch and go </p></i>
+        <i class="fa-solid fa-plane-departure"></i>
+      <% if current_page?(airplanes_path) %>
+        <p> Touch and go </p>
+      <% end %>
     <% end %>
 
 
