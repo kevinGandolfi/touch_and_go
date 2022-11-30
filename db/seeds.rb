@@ -5,17 +5,17 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-Airplane.destroy_all
-User.destroy_all
-kevin = User.create({ first_name: "Kevin", last_name: "Gandolfi", email: "blalbla@french.com", password: "Olga_is_the_best" })
-plane = Airplane.new({ brand_and_model: "GULFSTREAM G700", weight: 48_806, registration: "N700GS", range: 7_500, speed: "MACH 0.90", max_altitude: 51_000, number_of_engines: 2, pax_capacity: 10 })
-plane.user = kevin
+# Airplane.destroy_all
+# User.destroy_all
+# kevin = User.create({ first_name: "Kevin", last_name: "Gandolfi", email: "blalbla@french.com", password: "Olga_is_the_best" })
+# plane = Airplane.new({ brand_and_model: "GULFSTREAM G700", weight: 48_806, registration: "N700GS", range: 7_500, speed: "MACH 0.90", max_altitude: 51_000, number_of_engines: 2, pax_capacity: 10 })
+# plane.user = kevin
 
-plane.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'plane.jpg')), filename: 'plane.png', content_type: 'image.png')
+# plane.photos.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'plane.jpg')), filename: 'plane.png', content_type: 'image.png')
 
 
 #plane.photos.first.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'plane.jpg')), filename: 'plane.png', content_type: 'image.png')
-plane.save
+# plane.save
 #plane = Airplane.new({ brand_and_model: "DASSAULT FALCON 8X", weight: 33_112, registration: "CS-TCR", range: 6_450, speed: "MACH 0.90", max_altitude: 51_000, number_of_engines: 3, pax_capacity: 15 })
 # plane.user = kevin
 # plane.photos.first.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'plane.jpg')), filename: 'plane.png', content_type: 'image.png')
