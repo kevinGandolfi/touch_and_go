@@ -10,9 +10,9 @@
 <div class="homegrid">
   <div class="col">
     <div class="card">
-      <img src="..." class="card-img-top" alt="...">
       <div class="card-body">
         <% @airplanes.each do |airplane| %>
+        <%= cl_image_tag airplane.photos.first.key, class:"card-img-top" %>
         <h5 class="card-title"> <%= airplane.brand_and_model %></h5>
         <p class="card-list"> <%= airplane.registration %></p>
         <p> <%= airplane.user.first_name %> <%=  airplane.user.last_name %>
@@ -22,3 +22,6 @@
     </div>
   </div>
 </div>
+
+
+
