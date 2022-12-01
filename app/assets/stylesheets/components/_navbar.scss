@@ -2,7 +2,13 @@
   justify-content: space-between;
   background: #16213E;
   border: rgb(1, 1, 6);
+  /* background-color: transparent;
+  transition: 0.5s background-color ease; */
 }
+
+/* .navbar-lewagon-white {
+  background-color: white;
+} */
 
 .navbar-brand {
   color: white;
@@ -20,7 +26,7 @@
   display: inline;
   justify-content: space-between;
   color: white;
-  margin-left: 20px;
+  margin-left: 19px;
 }
 
 .nav-link {
