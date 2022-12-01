@@ -4,6 +4,12 @@ class AirplanesController < ApplicationController
 
   def index
     @airplanes = Airplane.all
+    @markers = @airplanes.geocoded.map do |airplane|
+      {
+        lat: airplane.latitude,
+        lng: airplane.longitude
+      }
+    end
   end
 
   def show
@@ -48,7 +54,7 @@ class AirplanesController < ApplicationController
   private
 
   def airplane_params
-    params.require(:airplane).permit(:weight, :registration, :number_of_engines, :brand_and_model, :pax_capacity, :speed, :range, :max_altitude, photos: [])
+    params.require(:airplane).permit(:weight, :registration, :number_of_engines, :brand_and_model, :pax_capacity, :speed, :range, :max_altitude, :address, photos: [])
   end
 
   def set_airplane
