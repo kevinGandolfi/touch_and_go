@@ -1,6 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 import mapboxgl from 'mapbox-gl';
-import "./.env"
+
 
 // Connects to data-controller="map"
 export default class extends Controller {
@@ -30,11 +30,4 @@ export default class extends Controller {
       this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
       this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
   }
-   mapboxgl.accessToken = MAPBOX_API_KEY;
-   const map = new mapboxgl.Map({
-   container: 'map', // container ID
-   style: 'mapbox://styles/mapbox/streets-v12', // style URL
-   center: [-74.5, 40], // starting position [lng, lat]
-   zoom: 9, // starting zoom
-   });
 }
