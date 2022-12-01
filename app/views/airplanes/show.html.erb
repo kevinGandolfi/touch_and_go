@@ -1,56 +1,22 @@
 <div class="container">
   <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-<<<<<<< HEAD
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <% @airplane.photos.each_with_index do |photo, index| %>
-        <% active = index == 0 ? "active" : "" %>
-        <div class="carousel-item <%= active %>" data-bs-interval="10000">
-          <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, class: "d-block w-100" %>
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Amazing</h5>
-            <p>airplane..</p>
-          </div>
-        </div>
-      <% end %>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-=======
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
->>>>>>> master
   </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 mx-auto">
-      <div class="form-group">
-        <div class="form-group">
-          <div class="datepicker date input-group">
-            <input type="text" placeholder="Choose a date" class="form-control" id="reservationDate">
-            <div class="input-group-append"><span class="input-group-text px-4"><i class="fa fa-calendar"></i></span></div>
-          </div>
+  <div class="carousel-inner">
+    <% @airplane.photos.each_with_index do |photo, index| %>
+      <% active = index == 0 ? "active" : "" %>
+      <div class="carousel-item <%= active %>" data-bs-interval="10000">
+        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill , class:"d-block w-100" %>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Amazing</h5>
+          <p>airplane..</p>
         </div>
       </div>
-    </div>
+    <% end %>
   </div>
-<<<<<<< HEAD
-</div>
-=======
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -60,28 +26,15 @@
     <span class="visually-hidden">Next</span>
   </button>
  </div>
->>>>>>> master
 
  <div class="container-button">
   <%# <%= link_to "Add a new airplane" , new_airplane_path, class: "btn btn-gradient" %>
-
-<<<<<<< HEAD
-
-<%= link_to "Delete",
-            airplane_path(@airplane),
-            data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
-
-<%= link_to "Back", airplanes_path %>
-=======
   <%= link_to "Delete",
   airplane_path(@airplane),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
   class: "btn btn-gradient"
   %>
-
   <%= link_to "Back", airplanes_path, class: "btn btn-gradient" %>
-
   <%= link_to "Edit", edit_airplane_path(@airplane.id), class: "btn btn-gradient" %>
  </div>
 </div>
->>>>>>> master
