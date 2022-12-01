@@ -1,5 +1,12 @@
-.container-map {
+.container-map-booking {
  display: flex;
  justify-content: center;
- align-items: center;
+}
+
+.container-booking {
+ border-style: groove;
+}
+
+.container-map {
+  margin-right: 20px;
 }

@@ -14,6 +14,7 @@ class AirplanesController < ApplicationController
 
   def show
     @booking = Booking.new
+    @marker = [ {lng: @airplane.longitude, lat: @airplane.latitude} ]
   end
 
   def new

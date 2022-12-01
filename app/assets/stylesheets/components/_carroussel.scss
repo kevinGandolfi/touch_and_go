@@ -1,13 +1,10 @@
-.carousel {
-  min-height: 300px;
-}
-
-.carousel-inner {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .container-button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.carousel-active {
   display: flex;
   justify-content: center;
 }
