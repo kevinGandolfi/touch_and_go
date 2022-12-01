@@ -35,10 +35,12 @@
   %>
     <%= link_to "Back", airplanes_path, class: "btn btn-gradient" %>
     <%= link_to "Edit", edit_airplane_path(@airplane.id), class: "btn btn-gradient" %>
+     <%= render "bookings/form", airplane: @airplane, booking: @booking %>
   </div>
 </div>
 <div class="container-map" style="width: 996px; height: 300px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+ </div>
 </div>
