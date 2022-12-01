@@ -1,0 +1,5 @@
+  <%= simple_form_for [airplane, booking] do |f| %>
+    <%= f.input :start_day, as: :string, input_html: { data: { controller: "flatpickr" } } %>
+    <%= f.input :end_day, as: :string, input_html: { data: { controller: "flatpickr" } } %>
+    <%= f.submit %>
+  <% end %>
