@@ -1,5 +1,6 @@
 <div class="container">
   <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+<<<<<<< HEAD
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -25,6 +26,12 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+=======
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+>>>>>>> master
   </div>
 </div>
 
@@ -41,13 +48,40 @@
       </div>
     </div>
   </div>
+<<<<<<< HEAD
 </div>
+=======
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+ </div>
+>>>>>>> master
 
-<%= link_to "Add a new airplane", new_airplane_path %>
+ <div class="container-button">
+  <%# <%= link_to "Add a new airplane" , new_airplane_path, class: "btn btn-gradient" %>
 
+<<<<<<< HEAD
 
 <%= link_to "Delete",
             airplane_path(@airplane),
             data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
 
 <%= link_to "Back", airplanes_path %>
+=======
+  <%= link_to "Delete",
+  airplane_path(@airplane),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+  class: "btn btn-gradient"
+  %>
+
+  <%= link_to "Back", airplanes_path, class: "btn btn-gradient" %>
+
+  <%= link_to "Edit", edit_airplane_path(@airplane.id), class: "btn btn-gradient" %>
+ </div>
+</div>
+>>>>>>> master

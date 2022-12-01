@@ -15,9 +15,6 @@
     <!-- Calling the minified stylesheet from the Datepicker extension -->
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
   </head>
-
-
-
   <body>
     <!-- JQuery extension -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -26,52 +23,59 @@
     <!-- Javascript core of Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" class="border border-success p-2 mb-2">
       <div class="container-fluid">
-        <%= link_to "#", class: "navbar-brand" do %>
-          <i class="fa-solid fa-plane-departure"></i>
-          <% if current_page?(airplanes_path) %>
+        <%= link_to airplanes_path, class: "navbar-brand" do %>
+          <i class="fa-solid fa-plane-departure">
             <p> Touch and go </p>
-          <% end %>
+          </i>
         <% end %>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto">
             <% if user_signed_in? %>
               <li class="nav-item active">
-                <%= link_to "Home", "#", class: "nav-link" %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "Messages", "#", class: "nav-link" %>
+                <%= link_to "Home", airplanes_path, class: "nav-link" %>
               </li>
               <li class="nav-item dropdown">
                 <%= image_tag "https://images.pexels.com/photos/40753/military-raptor-jet-f-22-airplane-40753.jpeg?auto=compress&cs=tinysrgb&w=800", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                  <%= link_to "My bookings", "#", class: "dropdown-item" %>
-                  <%= link_to "Rent my plane", "#", class: "dropdown-item" %>
-                  <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: { turbo_method: :delete } %>
+                  <%= link_to "Dashboard", "#", class: "dropdown-item" %>
+                  <%= link_to "Add a new plane", new_airplane_path, class: "dropdown-item" %>
+                  <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
                 </div>
               </li>
             <% else %>
-            <li>
-              <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-info" type="submit">Search</button>
-              </form>
-            </li>
               <li class="nav-item"-->
                 <%= link_to "Login", new_user_session_path, class: "nav-link" %>
               </li-->
-            <% end %>
+            <%end %>
           </ul>
         </div>
       </div>
     </div>
     <%= yield %>
+    <div class="footer">
+      <div class="footer-links">
+        <a href="https://github.com"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div class="footer-copyright">
+        This footer is made with <i class="fas fa-heart"></i> Touch and Go
+      </div>
+    </div>
   </body>
 </html>
+<%# <nav class="navbar bg-light">
+  <div class="container-fluid">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav> %>
