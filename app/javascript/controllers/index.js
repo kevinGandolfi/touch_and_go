@@ -4,8 +4,11 @@
 
 import { application } from "./application"
 
+import FlatpickrController from "./flatpickr_controller"
+application.register("flatpickr", FlatpickrController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-import NavbarController from "./navbar_controller.js"
+import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)

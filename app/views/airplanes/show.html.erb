@@ -37,4 +37,5 @@
   <%= link_to "Back", airplanes_path, class: "btn btn-gradient" %>
   <%= link_to "Edit", edit_airplane_path(@airplane.id), class: "btn btn-gradient" %>
  </div>
+  <%= render "bookings/form", airplane: @airplane, booking: @booking %>
 </div>
