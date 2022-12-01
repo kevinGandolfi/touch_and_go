@@ -37,7 +37,7 @@
               <li class="nav-item dropdown">
                 <%= image_tag "https://images.pexels.com/photos/40753/military-raptor-jet-f-22-airplane-40753.jpeg?auto=compress&cs=tinysrgb&w=800", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                  <%= link_to "Dashboard", "#", class: "dropdown-item" %>
+                  <%= link_to "Dashboard", "/dashboard", class: "dropdown-item" %>
                   <%= link_to "Add a new plane", new_airplane_path, class: "dropdown-item" %>
                   <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
                 </div>
