@@ -1,12 +1,17 @@
 .footer {
-  background: #F4F4F4;
+  background: #bebdbd;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  height: 100px;
+  // position: fixed;
+  position: absolute;
+  width: 100%; height: 100px;
+  bottom: 0; left: 0; right: 0;
+  // height: 100px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
   margin-bottom: 25px;
+
 }
 .footer-links {
   display: flex;

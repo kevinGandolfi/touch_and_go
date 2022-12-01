@@ -9,4 +9,7 @@ class Airplane < ApplicationRecord
   validates :range, presence: true
   validates :speed, presence: true
   validates :max_altitude, presence: true
+  validates :address, presence: true
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
