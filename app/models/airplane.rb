@@ -12,4 +12,11 @@ class Airplane < ApplicationRecord
   validates :address, presence: true
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+
+  include PgSearch::Model
+  pg_search_scope :search_by_brand_and_model,
+  against: [ :brand_and_model ],
+  using: {
+    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+  }
 end

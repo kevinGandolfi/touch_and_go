@@ -46,6 +46,11 @@ class AirplanesController < ApplicationController
     redirect_to airplanes_path, status: :see_other
   end
 
+  def search
+    @airplanes = Airplane.search_by_brand_and_model(params[:brand])
+    render :index
+  end
+
   private
 
   def airplane_params
