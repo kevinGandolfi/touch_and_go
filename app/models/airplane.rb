@@ -9,4 +9,11 @@ class Airplane < ApplicationRecord
   validates :range, presence: true
   validates :speed, presence: true
   validates :max_altitude, presence: true
+
+  include PgSearch::Model
+  pg_search_scope :search_by_brand_and_model,
+  against: [ :brand_and_model ],
+  using: {
+    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+  }
 end
