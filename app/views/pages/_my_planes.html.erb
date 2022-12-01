@@ -1,0 +1,22 @@
+<div class="homegrid">
+  <% @airplanes_user.each do |airplane| %>
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <% unless airplane.photos.first.nil? %>
+            <%= cl_image_tag airplane.photos.first.key, class: "card-img-top" %>
+          <% end %>
+          <h5 class="card-title"> <%= airplane.brand_and_model %></h5>
+          <p class="card-list"> <%= airplane.registration %></p>
+          <p> <%= airplane.user.first_name %> <%= airplane.user.last_name %></p>
+          <% if @bookings.include?(Booking.where(airplane_id: airplane.id).first) %>
+            <span>Booked</span>
+          <% else %>
+            <span>Available</span>
+          <% end %>
+          <%= link_to "Display", airplane_path(airplane.id) %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

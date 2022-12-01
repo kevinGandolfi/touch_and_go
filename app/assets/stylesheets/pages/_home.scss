@@ -22,4 +22,9 @@ position:relative;
  display:grid;
  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
  grid-gap: 16px;
+ z-index: 10;
+}
+
+.containerhome {
+  width: 100%;
 }
