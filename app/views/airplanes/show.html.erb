@@ -38,11 +38,14 @@
     airplane_path(@airplane),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
     class: "btn btn-gradient"%>
-    <%= link_to "Back", airplanes_path, class: "btn btn-gradient" %>
+    <%= link_to "Back", airplanes_path, class: "btn btn-gradient", id:"middle-button" %>
     <%= link_to "Edit", edit_airplane_path(@airplane.id), class: "btn btn-gradient" %>
   </div>
-
+  <div class="container-text">
+  <h1>You can now book this plane!</h1>
+  </div>
   <div class="container-map-booking">
+
    <div class="container-map" style="width: 600px; height: 300px;"
      data-controller="map"
      data-map-markers-value="<%= @marker.to_json %>"

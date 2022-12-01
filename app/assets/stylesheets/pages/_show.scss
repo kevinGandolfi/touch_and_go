@@ -1,12 +1,42 @@
 .container-map-booking {
  display: flex;
  justify-content: center;
+ padding-top: 30px;
 }
 
 .container-booking {
- border-style: groove;
+ width: 380px;
+ height: 300px;
+ border-style: ridge;
+ background-color:#c1c2c2;
+ color: black;
+ border-radius: 5px;
+ justify-content: center;
 }
 
 .container-map {
-  margin-right: 20px;
+  margin-right: 30px;
+}
+
+#carouselExampleDark {
+  margin-top: 150px;
+}
+
+.container-button {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content:center;
+  padding: 5px;
+  margin: 5px;
+}
+
+.container-text {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+#middle-button {
+  margin-left: 10px;
+  margin-right: 10px;
 }
