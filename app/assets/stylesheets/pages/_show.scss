@@ -1,17 +1,19 @@
 .container-map-booking {
- display: flex;
- justify-content: center;
- padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
 }
 
 .container-booking {
- width: 380px;
- height: 300px;
- border-style: ridge;
- background-color:#c1c2c2;
- color: black;
- border-radius: 5px;
- justify-content: center;
+  width: 380px;
+  height: 300px;
+  border-style: ridge;
+  background-color: #c1c2c2;
+  color: black;
+  border-radius: 5px;
+  justify-content: center;
+  border-radius: 5px;
+  justify-content: center;
 }
 
 .container-map {
@@ -25,7 +27,7 @@
 .container-button {
   margin-bottom: 10px;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   padding: 5px;
   margin: 5px;
 }
