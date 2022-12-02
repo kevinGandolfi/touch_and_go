@@ -1,6 +1,8 @@
 class AirplanesController < ApplicationController
   before_action :set_airplane, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: :index
+  before_action :check_if_can_access, only: [:edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :search]
+
 
   def index
     @airplanes = Airplane.all
@@ -53,6 +55,12 @@ class AirplanesController < ApplicationController
   end
 
   private
+
+  def check_if_can_access
+    if @airplane.user != current_user
+      redirect_to root_path, notice: "You're not allowed to edit or delete an airplane if you're not the owner!"
+    end
+  end
 
   def airplane_params
     params.require(:airplane).permit(:weight, :registration, :number_of_engines, :brand_and_model, :pax_capacity, :speed, :range, :max_altitude, :address, photos: [])
