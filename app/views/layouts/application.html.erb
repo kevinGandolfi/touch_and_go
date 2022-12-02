@@ -51,9 +51,12 @@
         </div>
       </div>
     </div>
+
     <div class="main-container">
       <%= yield %>
+      <%= render "shared/flashes" %>
     </div>
+
     <div class="footer">
       <div class="footer-links">
         <a href="https://github.com"><i class="fab fa-github"></i></a>
