@@ -1,8 +1,8 @@
 class AirplanesController < ApplicationController
   before_action :set_airplane, only: [:show, :edit, :update, :destroy]
   before_action :check_if_can_access, only: [:edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :search]
 
-  skip_before_action :authenticate_user!, only: :index
 
   def index
     @airplanes = Airplane.all
